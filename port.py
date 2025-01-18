@@ -6,7 +6,7 @@ def scan_ports(ip, start_port=1, end_port=1024):
     
     for port in range(start_port, end_port + 1):
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        sock.settimeout(0.5)  # Definindo um timeout para cada tentativa de conexão
+        sock.settimeout(0.5)  
         
         result = sock.connect_ex((ip, port))
         if result == 0:
